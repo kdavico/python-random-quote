@@ -1,11 +1,14 @@
+import random 
+
 def central():
-  print("Keep it logically awesome.")
 
-  #f = open("quotes.txt")
-  #quotes = f.readlines()
-  #f.close()
+  f = open("quotes.txt") # opens the quotes.txt file
+  quotes = f.readlines() # reading all the lines into 'quotes' variable
+  f.close() # closes the quotes.txt file
 
-  #print(quotes)
+  last = len(quotes) - 1
+  rnd = random.randint(0, last)
+  print(quotes[rnd])
 
 if __name__== "__main__":
   central()
